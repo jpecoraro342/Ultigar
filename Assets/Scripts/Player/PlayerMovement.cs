@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 		Vector3 targetPoint;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		
-		if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, 100.0f)) {
+		if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, 10050.0f)) {
 			targetPoint = hit.point;
 			clickPoint = targetPoint;
 		}
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void UpdateDebugText() {
-		debugText.text = "Click Point: " + clickPoint + "\nTarget Direction: " + moveDirection + "\nCurrent Rotation: " + transform.rotation + "\nRotation: " + transform.rotation + "\nPosition: " + transform.position + "\nForward Direction: " + transform.forward;
+		// debugText.text = "Click Point: " + clickPoint + "\nTarget Direction: " + moveDirection + "\nCurrent Rotation: " + transform.rotation + "\nRotation: " + transform.rotation + "\nPosition: " + transform.position + "\nForward Direction: " + transform.forward;
 	}
 	
 }
