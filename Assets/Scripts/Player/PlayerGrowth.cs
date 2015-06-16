@@ -6,6 +6,8 @@ public class PlayerGrowth : MonoBehaviour {
 	public MiniCellManager babyManager;
 	private List<GameObject> enemyPlayers;
 
+	public float smoothing = 20.0f;
+
 	void Start () {
 		enemyPlayers = new List<GameObject>();
 	}
@@ -20,7 +22,17 @@ public class PlayerGrowth : MonoBehaviour {
 		scale.y += growthAmount;
 		scale.z += growthAmount;
 
-		gameObject.transform.localScale = scale;
+		StartCoroutine(LerpGrowth(smoothing * Time.deltaTime, gameObject.transform.localScale, scale));
+	}
+
+	IEnumerator LerpGrowth(float time, Vector3 original, Vector3 newScale) {
+		var reducedTime = time;
+		while (reducedTime > 0.0f) {
+			reducedTime -= Time.deltaTime;
+			transform.localScale = Vector3.Lerp(newScale, original, reducedTime/time);
+
+			yield return null;
+		}
 	}
 	
 	void OnTriggerEnter(Collider other) {

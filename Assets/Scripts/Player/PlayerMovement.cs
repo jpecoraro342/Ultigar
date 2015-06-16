@@ -5,7 +5,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 	public Text debugText;
 
-	public float baseSpeed = 5.0f;
+	public float baseSpeed = 1.0f;
 	public float radius = .5f;
 
 	private float currentSpeed;

@@ -282,7 +282,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 718050013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -623,10 +623,6 @@ Prefab:
       propertyPath: debugText
       value: 
       objectReference: {fileID: 718050014}
-    - target: {fileID: 11457062, guid: 05234930f901b410c9c4e25eefd1fafd, type: 2}
-      propertyPath: baseSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 11446656, guid: 05234930f901b410c9c4e25eefd1fafd, type: 2}
       propertyPath: babyManager
       value: 

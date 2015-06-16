@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3533ccf957a4ab99139b8b6b8b4fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  babyManager: {fileID: 0}
+  smoothing: 5
 --- !u!114 &11457062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugText: {fileID: 0}
-  baseSpeed: 4
+  baseSpeed: 1
   radius: .5
 --- !u!135 &13554814
 SphereCollider:
